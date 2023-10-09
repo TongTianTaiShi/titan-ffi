@@ -3,3 +3,6 @@
 /.idea/.gitignore
 /.idea/titan-ffi.iml
 /.idea/vcs.xml
+/ticrypto.h
+/libticrypto.a
+/ticrypto.pc

@@ -1,4 +1,0 @@
-Name: ticrypto
-Version: 73334feac944618843845f38382f894664f97967
-Description: C bindings for Filecoin Proofs
-Libs: -liconv -lSystem -lc -lm
