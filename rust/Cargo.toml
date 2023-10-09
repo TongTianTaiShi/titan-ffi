@@ -2,6 +2,8 @@
 name = "filcrypto"
 version = "0.1.0"
 edition = "2021"
+resolver = "2"
+publish = false
 
 [lib]
 crate-type = ["rlib", "staticlib"]
