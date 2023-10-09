@@ -44,14 +44,14 @@ main() {
         __linker_flags=$(echo ${__linker_flags} | sed 's/-lOpenCL/-framework OpenCL/g')
         echo "Using Linker Flags: ${__linker_flags}"
 
-        find . -type f -name "libfilcrypto.a"
-        rm -f ./target/aarch64-apple-darwin/release/libfilcrypto.a
-        rm -f ./target/x86_64-apple-darwin/release/libfilcrypto.a
+        find . -type f -name "libticrypto.a"
+        rm -f ./target/aarch64-apple-darwin/release/libticrypto.a
+        rm -f ./target/x86_64-apple-darwin/release/libticrypto.a
         echo "Eliminated non-universal binary libraries"
-        find . -type f -name "libfilcrypto.a"
+        find . -type f -name "libticrypto.a"
     fi
 
-    # generate filcrypto.h
+    # generate ticrypto.h
     # The header files are the same even without having any features enables,
     # this reduces the compile time and makes it work on more platforms.
     RUSTFLAGS="${__rust_flags}" HEADER_DIR="." \
@@ -60,15 +60,15 @@ main() {
     # generate pkg-config
     #
     sed -e "s;@VERSION@;$(git rev-parse HEAD);" \
-        -e "s;@PRIVATE_LIBS@;${__linker_flags};" "filcrypto.pc.template" > "filcrypto.pc"
+        -e "s;@PRIVATE_LIBS@;${__linker_flags};" "ticrypto.pc.template" > "ticrypto.pc"
 
     # ensure header file was built
     #
-    find -L . -type f -name "filcrypto.h" | read
+    find -L . -type f -name "ticrypto.h" | read
 
     # ensure the archive file was built
     #
-    find -L . -type f -name "libfilcrypto.a" | read
+    find -L . -type f -name "libticrypto.a" | read
 }
 
 main "$@"; exit

@@ -2,8 +2,8 @@ package cgo
 
 /*
 #cgo LDFLAGS: -L${SRCDIR}/..
-#cgo pkg-config: ${SRCDIR}/../filcrypto.pc
-#include "../filcrypto.h"
+#cgo pkg-config: ${SRCDIR}/../ticrypto.pc
+#include "../ticrypto.h"
 #include <stdlib.h>
 */
 import "C"

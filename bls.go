@@ -3,10 +3,10 @@
 
 package ffi
 
-// #cgo linux LDFLAGS: ${SRCDIR}/libfilcrypto.a -Wl,-unresolved-symbols=ignore-all
-// #cgo darwin LDFLAGS: ${SRCDIR}/libfilcrypto.a -Wl,-undefined,dynamic_lookup
-// #cgo pkg-config: ${SRCDIR}/filcrypto.pc
-// #include "./filcrypto.h"
+// #cgo linux LDFLAGS: ${SRCDIR}/libticrypto.a -Wl,-unresolved-symbols=ignore-all
+// #cgo darwin LDFLAGS: ${SRCDIR}/libticrypto.a -Wl,-undefined,dynamic_lookup
+// #cgo pkg-config: ${SRCDIR}/ticrypto.pc
+// #include "./ticrypto.h"
 import "C"
 
 import (

@@ -4,7 +4,6 @@
 
 pub mod bls;
 
-
 // Generates the headers.
 // Run `HEADER_DIR=<dir> cargo test --locked build_headers --features c-headers` to build
 #[safer_ffi::cfg_headers]
@@ -15,7 +14,7 @@ fn build_headers() -> std::io::Result<()> {
 
     let header_dir = env::var("HEADER_DIR").expect("Missing \"HEADER_DIR\"");
     let out_dir = Path::new(&header_dir);
-    let hdr_out = out_dir.join("filcrypto.h");
+    let hdr_out = out_dir.join("ticrypto.h");
 
     safer_ffi::headers::builder()
         .to_file(&hdr_out)?

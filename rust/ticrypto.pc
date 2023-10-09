@@ -1,0 +1,4 @@
+Name: filcrypto
+Version: 60a3ffaba19026125956d69c15d17af0e2ccb77c
+Description: C bindings for Filecoin Proofs
+Libs: -liconv -lSystem -lc -lm
