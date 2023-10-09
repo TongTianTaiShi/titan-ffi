@@ -10,7 +10,7 @@ package ffi
 import "C"
 
 import (
-	"./cgo"
+	"github.com/TongTianTaiShi/titan-ffi/cgo"
 )
 
 // Hash computes the digest of a message
